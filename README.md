@@ -1,11 +1,11 @@
-About napari-spatialdata
-========================
+About napari-spatialdata-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-spatialdata-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/scverse/napari-spatialdata.git
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-spatialdata-feedstock/blob/main/LICENSE.txt)
 
 Summary: Interactive visualization of spatial omics data with napari
 
