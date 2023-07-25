@@ -18,17 +18,30 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools-scm
   run:
     - anndata
+    - cycler
+    - dask
+    - geopandas
+    - loguru
     - magicgui
+    - matplotlib-base
     - napari
+    - napari-matplotlib
     - numba
     - numpy
+    - packaging
+    - pandas
     - python >=3.8
     - qtpy
     - scikit-image
+    - spatialdata
+    - scikit-learn
+    - scipy
     - squidpy
-    - loguru
+    - superqt
+    - vispy
 
 test:
   imports:
