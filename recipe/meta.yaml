@@ -17,18 +17,31 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
+    - setuptools-scm
   run:
     - anndata
-    - magicgui
+    - cycler   # Imported but not in requirements
+    - dask-core  # Imported but not in requirements
+    - geopandas  # Imported but not in requirements
+    - loguru
+    # - magicgui  # Required but not imported
+    - matplotlib-base  # Imported but not in requirements
     - napari
+    - napari-matplotlib  # Imported but not in requirements
     - numba
     - numpy
-    - python >=3.8
+    - packaging  # Imported but not in requirements
+    - pandas  # Imported but not in requirements
+    - python >=3.9
     - qtpy
-    - scikit-image
-    - squidpy
-    - loguru
+    # - scikit-image  # Required but not imported
+    - scikit-learn  # Imported but not in requirements
+    - spatialdata
+    - scipy  # Imported but not in requirements
+    # - squidpy  # Required but not imported
+    - superqt  # Imported but not in requirements
+    - vispy  # Imported but not in requirements
 
 test:
   imports:
@@ -38,12 +51,14 @@ test:
     - pip check
   requires:
     - pip
+    - pyqt
 
 about:
-  home: https://github.com/scverse/napari-spatialdata.git
+  home: https://pypi.org/project/napari-spatialdata
   summary: Interactive visualization of spatial omics data with napari
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/scverse/napari-spatialdata
 
 extra:
   recipe-maintainers:
