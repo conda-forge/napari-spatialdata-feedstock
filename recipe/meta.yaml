@@ -1,5 +1,5 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1fd61cf1614a6de792ff98e58f4601b695be6d595fd140e52646ee3763b4f149
+  sha256: c8157d636f32fbc7d5c0f22e74078340b9ec23f4e902f7fa95c6d0b5e0109e75
 
 build:
   noarch: python
@@ -18,30 +18,32 @@ requirements:
   host:
     - pip
     - python >=3.9
+    - setuptools
     - setuptools-scm
   run:
     - anndata
-    - cycler   # Imported but not in requirements
-    - dask-core  # Imported but not in requirements
-    - geopandas  # Imported but not in requirements
+    - cycler             # Imported but not in requirements
+    - dask-core          # Imported but not in requirements
+    - geopandas          # Imported but not in requirements
     - loguru
-    # - magicgui  # Required but not imported
-    - matplotlib-base  # Imported but not in requirements
+    # - magicgui         # Required but not imported
+    - matplotlib-base    # Imported but not in requirements
     - napari
     - napari-matplotlib  # Imported but not in requirements
     - numba
     - numpy
-    - packaging  # Imported but not in requirements
-    - pandas  # Imported but not in requirements
+    - packaging          # Imported but not in requirements
+    - pandas             # Imported but not in requirements
     - python >=3.9
     - qtpy
-    # - scikit-image  # Required but not imported
-    - scikit-learn  # Imported but not in requirements
+    # - scikit-image     # Required but not imported
+    - scikit-learn       # Imported but not in requirements
+    - shapely            # Imported but not in requirements
     - spatialdata
-    - scipy  # Imported but not in requirements
-    # - squidpy  # Required but not imported
-    - superqt  # Imported but not in requirements
-    - vispy  # Imported but not in requirements
+    - scipy              # Imported but not in requirements
+    # - squidpy          # Required but not imported
+    - superqt            # Imported but not in requirements
+    - vispy              # Imported but not in requirements
 
 test:
   imports:
