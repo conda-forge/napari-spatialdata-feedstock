@@ -35,6 +35,7 @@ requirements:
     - packaging
     - pandas
     - pillow
+    - python >=3.9
     - qtpy
     - scipy
     - scikit-learn
