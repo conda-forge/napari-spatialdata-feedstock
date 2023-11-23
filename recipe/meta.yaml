@@ -43,6 +43,7 @@ requirements:
     - scipy              # Imported but not in requirements
     # - squidpy          # Required but not imported
     - superqt            # Imported but not in requirements
+    - typing-extensions <=4.5
     - vispy              # Imported but not in requirements
 
 test:
