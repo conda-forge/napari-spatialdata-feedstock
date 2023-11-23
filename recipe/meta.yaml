@@ -1,5 +1,5 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d6c6009380a9ef404702927e40015a264541f2c6abc3860f4e2da47bc4304ca6
+  sha256: b0560241652639f4728e19ac315afc94ed938306ed6aacf8920b4df388f4e9a0
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - setuptools-scm
   run:
     - anndata
+    - click
     - cycler             # Imported but not in requirements
     - dask-core          # Imported but not in requirements
     - geopandas          # Imported but not in requirements
@@ -30,6 +31,7 @@ requirements:
     - matplotlib-base    # Imported but not in requirements
     - napari
     - napari-matplotlib  # Imported but not in requirements
+    - napari-plugin-engine
     - numba
     - numpy
     - packaging          # Imported but not in requirements
@@ -45,6 +47,7 @@ requirements:
     - superqt            # Imported but not in requirements
     - typing-extensions <=4.5
     - vispy              # Imported but not in requirements
+    - xarray-datatree
 
 test:
   imports:
