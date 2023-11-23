@@ -1,5 +1,5 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.2.6" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b0560241652639f4728e19ac315afc94ed938306ed6aacf8920b4df388f4e9a0
+  sha256: decadbc0a8b72ce02c1fd57869111b1ada8a024b9fc2f53f4afb47dccf8a89a0
 
 build:
   noarch: python
@@ -23,31 +23,28 @@ requirements:
   run:
     - anndata
     - click
-    - cycler             # Imported but not in requirements
-    - dask-core          # Imported but not in requirements
-    - geopandas          # Imported but not in requirements
+    - cycler
+    - dask-core
+    - geopandas
     - loguru
-    # - magicgui         # Required but not imported
-    - matplotlib-base    # Imported but not in requirements
+    - matplotlib-base
     - napari
-    - napari-matplotlib  # Imported but not in requirements
-    - napari-plugin-engine
+    - napari-matplotlib
     - numba
     - numpy
-    - packaging          # Imported but not in requirements
-    - pandas             # Imported but not in requirements
+    - packaging
+    - pandas
+    - pillow
     - python >=3.9
     - qtpy
-    # - scikit-image     # Required but not imported
-    - scikit-learn       # Imported but not in requirements
-    - shapely            # Imported but not in requirements
-    - spatialdata
-    - scipy              # Imported but not in requirements
-    # - squidpy          # Required but not imported
-    - superqt            # Imported but not in requirements
-    - typing-extensions <=4.5
-    - vispy              # Imported but not in requirements
-    - xarray-datatree
+    - scipy
+    - scikit-learn
+    - shapely
+    - spatialdata >=0.0.15
+    - superqt
+    - typing-extensions >=4.8.0
+    - vispy
+    - xarray
 
 test:
   imports:
