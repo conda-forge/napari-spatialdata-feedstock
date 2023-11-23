@@ -39,11 +39,11 @@ requirements:
     # - scikit-image     # Required but not imported
     - scikit-learn       # Imported but not in requirements
     - shapely            # Imported but not in requirements
-    - spatialdata
+    - spatialdata >=0.15
     - scipy              # Imported but not in requirements
     # - squidpy          # Required but not imported
     - superqt            # Imported but not in requirements
-    - typing-extensions <=4.5
+    - typing-extensions >=4.8.0
     - vispy              # Imported but not in requirements
 
 test:
