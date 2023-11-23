@@ -22,6 +22,7 @@ requirements:
     - setuptools-scm
   run:
     - anndata
+    - click
     - cycler             # Imported but not in requirements
     - dask-core          # Imported but not in requirements
     - geopandas          # Imported but not in requirements
@@ -30,6 +31,7 @@ requirements:
     - matplotlib-base    # Imported but not in requirements
     - napari
     - napari-matplotlib  # Imported but not in requirements
+    - napari-plugin-engine
     - numba
     - numpy
     - packaging          # Imported but not in requirements
@@ -45,6 +47,7 @@ requirements:
     - superqt            # Imported but not in requirements
     - typing-extensions <=4.5
     - vispy              # Imported but not in requirements
+    - xarray-datatree
 
 test:
   imports:
