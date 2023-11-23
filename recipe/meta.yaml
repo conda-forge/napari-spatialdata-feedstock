@@ -1,5 +1,5 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8157d636f32fbc7d5c0f22e74078340b9ec23f4e902f7fa95c6d0b5e0109e75
+  sha256: d6c6009380a9ef404702927e40015a264541f2c6abc3860f4e2da47bc4304ca6
 
 build:
   noarch: python
@@ -43,6 +43,7 @@ requirements:
     - scipy              # Imported but not in requirements
     # - squidpy          # Required but not imported
     - superqt            # Imported but not in requirements
+    - typing-extensions <=4.5
     - vispy              # Imported but not in requirements
 
 test:
