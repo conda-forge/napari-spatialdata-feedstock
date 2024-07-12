@@ -1,13 +1,13 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.3.1" %}
+{% set version = "0.5.0.post1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: decadbc0a8b72ce02c1fd57869111b1ada8a024b9fc2f53f4afb47dccf8a89a0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 273dcd3e716bc7370ab9618f7dfbb124153cd6d0b5f7b05d8b18de884ebd75a4
 
 build:
   noarch: python
@@ -21,14 +21,14 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - anndata
+    - anndata >=0.9.1
     - click
     - cycler
-    - dask-core
+    - dask-core >=2024.4.1
     - geopandas
     - loguru
     - matplotlib-base
-    - napari
+    - napari >=0.4.19.post1
     - napari-matplotlib
     - numba
     - numpy
@@ -37,14 +37,15 @@ requirements:
     - pillow
     - python >=3.9
     - qtpy
+    - scanpy
     - scipy
     - scikit-learn
     - shapely
-    - spatialdata >=0.0.15
+    - spatialdata >=0.2.1
     - superqt
     - typing-extensions >=4.8.0
     - vispy
-    - xarray
+    - xarray-datatree
 
 test:
   imports:
