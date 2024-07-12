@@ -21,14 +21,14 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - anndata
+    - anndata >=0.9.1
     - click
     - cycler
-    - dask-core
+    - dask-core >=2024.4.1
     - geopandas
     - loguru
     - matplotlib-base
-    - napari
+    - napari >=0.4.19.post1
     - napari-matplotlib
     - numba
     - numpy
@@ -40,7 +40,7 @@ requirements:
     - scipy
     - scikit-learn
     - shapely
-    - spatialdata >=0.0.15
+    - spatialdata >=0.2.1
     - superqt
     - typing-extensions >=4.8.0
     - vispy
