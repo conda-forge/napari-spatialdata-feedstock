@@ -37,6 +37,7 @@ requirements:
     - pillow
     - python >=3.9
     - qtpy
+    - scanpy
     - scipy
     - scikit-learn
     - shapely
@@ -44,7 +45,8 @@ requirements:
     - superqt
     - typing-extensions >=4.8.0
     - vispy
-    - xarray
+    - xarray-datatree
+
 
 test:
   imports:
