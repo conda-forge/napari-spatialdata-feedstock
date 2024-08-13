@@ -1,5 +1,5 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.5.0.post1" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 273dcd3e716bc7370ab9618f7dfbb124153cd6d0b5f7b05d8b18de884ebd75a4
+  sha256: de313ad946ab2089d3068324da351118e9a00efd64acd804513aee9533a60dfb
 
 build:
   noarch: python
@@ -45,6 +45,7 @@ requirements:
     - superqt
     - typing-extensions >=4.8.0
     - vispy
+    - xarray
     - xarray-datatree
 
 test:
