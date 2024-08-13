@@ -45,6 +45,7 @@ requirements:
     - superqt
     - typing-extensions >=4.8.0
     - vispy
+    - xarray
     - xarray-datatree
 
 test:
