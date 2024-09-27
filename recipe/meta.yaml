@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python >=3.9.2
     - setuptools
     - setuptools-scm
   run:
@@ -35,7 +35,7 @@ requirements:
     - packaging
     - pandas
     - pillow
-    - python >=3.9
+    - python >=3.9.2
     - qtpy
     - scanpy
     - scipy
