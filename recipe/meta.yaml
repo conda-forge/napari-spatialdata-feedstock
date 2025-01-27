@@ -1,3 +1,4 @@
+{% set python_min = '3.9.2' %}
 {% set name = "napari-spatialdata" %}
 {% set version = "0.5.3" %}
 
@@ -6,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 03ef16109823b7c668cb0b711fcf2c25fb737a723b27bec606b59b03a05b8ffb
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9.2
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
@@ -35,7 +36,7 @@ requirements:
     - packaging
     - pandas
     - pillow
-    - python >=3.9.2
+    - python >={{ python_min }}
     - qtpy
     - scanpy
     - scipy
@@ -57,6 +58,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-spatialdata
