@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
+    - python >={{ python_min }}
     - anndata >=0.9.1
     - click
     - cycler
@@ -36,12 +37,12 @@ requirements:
     - packaging
     - pandas
     - pillow
-    - python >={{ python_min }}
+    - pyqtgraph
     - qtpy
     - scanpy
     - scipy
-    - scikit-learn
     - shapely
+    - scikit-learn
     - spatialdata >=0.2.6
     - superqt
     - typing-extensions >=4.8.0
