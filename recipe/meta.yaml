@@ -1,13 +1,14 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4.post0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 03ef16109823b7c668cb0b711fcf2c25fb737a723b27bec606b59b03a05b8ffb
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 3c0c2dbff707b845e6f0f6e77cd99300db20ebbc1c971d7f77a4473260038dc9
 
 build:
   noarch: python
@@ -17,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9.2
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
@@ -35,13 +36,13 @@ requirements:
     - packaging
     - pandas
     - pillow
-    - python >=3.9.2
+    - python >={{ python_min }}
     - qtpy
     - scanpy
     - scipy
     - scikit-learn
     - shapely
-    - spatialdata >=0.2.1
+    - spatialdata >=0.2.6
     - superqt
     - typing-extensions >=4.8.0
     - vispy
@@ -56,6 +57,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
     - pyqt
 
 about:
