@@ -1,5 +1,5 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.5.4.post0" %}
+{% set version = "0.5.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3c0c2dbff707b845e6f0f6e77cd99300db20ebbc1c971d7f77a4473260038dc9
+  sha256: a02cfe988620735bab2047f65b10b82fa890e34ac83ebc7a1e44581655640749
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
+    - python >={{ python_min }}
     - anndata >=0.9.1
     - click
     - cycler
@@ -29,19 +30,19 @@ requirements:
     - geopandas
     - loguru
     - matplotlib-base
-    - napari >=0.4.19.post1
+    - napari >=0.4.19.post1,<0.5.6
     - napari-matplotlib
     - numba
     - numpy
     - packaging
     - pandas
     - pillow
-    - python >={{ python_min }}
+    - pyqtgraph
     - qtpy
     - scanpy
     - scipy
-    - scikit-learn
     - shapely
+    - scikit-learn
     - spatialdata >=0.2.6
     - superqt
     - typing-extensions >=4.8.0
