@@ -10,3 +10,5 @@ pari:
 - 2.15.* *_pthread
 pyqt:
 - '5.15'
+python_min:
+- '3.9'
