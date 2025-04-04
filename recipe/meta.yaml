@@ -42,7 +42,7 @@ requirements:
     - scipy
     - scikit-learn
     - shapely
-    - spatialdata >=0.2.1
+    - spatialdata >=0.2.6
     - superqt
     - typing-extensions >=4.8.0
     - vispy
