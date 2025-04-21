@@ -1,5 +1,5 @@
 {% set name = "napari-spatialdata" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: a02cfe988620735bab2047f65b10b82fa890e34ac83ebc7a1e44581655640749
+  sha256: 794955161a57748de8ab3e306d3ca45a23229cba45ed794044cac433cf0bfdb1
 
 build:
   noarch: python
