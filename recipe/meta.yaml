@@ -23,15 +23,15 @@ requirements:
     - setuptools-scm
   run:
     - python >={{ python_min }}
-    - anndata >=0.9.1
+    - anndata >=0.12.0
     - click
     - cycler
-    - dask-core >=2024.4.1
+    - dask-core >=2025.2.0
     - geopandas
     - loguru
     - matplotlib-base
-    - napari >=0.4.19.post1,<0.5.6
-    - napari-matplotlib
+    - napari >=0.6.2
+    - napari-matplotlib >=3.0.2
     - numba
     - numpy
     - packaging
@@ -43,7 +43,7 @@ requirements:
     - scipy
     - shapely
     - scikit-learn
-    - spatialdata >=0.2.6
+    - spatialdata >=0.7.0
     - superqt
     - typing-extensions >=4.8.0
     - vispy
