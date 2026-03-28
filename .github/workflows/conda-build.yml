@@ -5,6 +5,7 @@
 name: Build conda package
 on:
   push:
+
   pull_request:
 
 concurrency:
